@@ -3,6 +3,7 @@ import os
 import json
 import requests
 import asyncio
+import sys # 導入 sys 模組
 from google import genai
 from google.genai import types # 導入 types 模組
 from document_parser import DocumentParser
@@ -32,7 +33,7 @@ async def main(page: ft.Page):
 
     if not API_KEY:
         page.snack_bar = ft.SnackBar(
-            ft.Text("錯誤：GEMINI_API_KEY 環境變數未設置。請設置您的 Gemini API 金鑰以使用完整功能。", color=ft.colors.WHITE),
+            ft.Text("錯誤：GEMINI_API_KEY 環境變數未設置。請設置您的 Gemini API 金鑰以使用完整功能。", color=ft.Colors.WHITE),
             bgcolor=ft.Colors.RED_700,
             open=True
         )
@@ -44,7 +45,7 @@ async def main(page: ft.Page):
             gemini_client = genai.Client(api_key=API_KEY)
         except Exception as e:
             page.snack_bar = ft.SnackBar(
-                ft.Text(f"初始化 Gemini 客戶端失敗: {e}", color=ft.colors.WHITE),
+                ft.Text(f"初始化 Gemini 客戶端失敗: {e}", color=ft.Colors.WHITE),
                 bgcolor=ft.Colors.RED_700,
                 open=True
             )

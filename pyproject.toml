@@ -5,6 +5,7 @@ description = "A document processing application using Flet and Google Gen AI."
 dependencies = [
     "flet[all]>=0.28.3",
     "google-genai>=1.23.0",
+    "pyinstaller>=6.14.1",
     "pymupdf>=1.26.1",
     "python-dotenv>=1.1.1",
     "requests>=2.32.4",

@@ -59,7 +59,7 @@ uv add flet google-genai requests python-dotenv
   ```
   GEMINI_API_KEY="您的實際 Gemini API 金鑰"
   ```
-  **重要：** 為了安全，請勿將您的 `.env` 檔案提交到版本控制中。`.gitignore` 檔案已配置為自動忽略它。
+  **重要：** 為了安全，請勿將您的 `.env` 檔案提交到版本控制中。`.gitignore` 檔案已配置為自動忽略它。請注意，打包後的執行檔會自動讀取同目錄下的 `.env` 檔案，但為了避免將您的 API 金鑰打包進執行檔，建議在打包前不要在專案根目錄下配置 `.env` 檔案，除非您執意將 API 金鑰打包進去。在運行打包應用程式時，您可以在執行檔同目錄下創建 `.env` 檔案來設定 `GEMINI_API_KEY`。
 
 ## 如何運行應用程式
 
