@@ -38,5 +38,9 @@ test/
 memory_bank/
 .clinerules/
 .roo/
+
+# Specific markdown files to exclude
+gemini_cli_config_examples_zh-TW.md
+updated_memory_bank_summary.md
 </content>
 <line_count>32</line_count>
