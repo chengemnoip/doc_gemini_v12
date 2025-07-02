@@ -33,5 +33,10 @@ test/
 *.log
 *.bak
 *.swp
+
+# Project-specific directories to ignore
+memory_bank/
+.clinerules/
+.roo/
 </content>
 <line_count>32</line_count>
